@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import Signup from './components/Signup'
 import Login from './components/Login'
 import Donate from './components/Donate'
+import Req from './components/Req'
 function App() {
 
   return (
@@ -19,11 +20,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About/> } />
-          <Route path="/contact" element={<Contact/> } />
+          <Route path="/review" element={<Contact/> } />
           <Route path="/profile" element={<Profile/> } />
           <Route path="/signup" element={<Signup/> } />
           <Route path="/login" element={<Login/> } />
           <Route path="/donate" element={<Donate/> } />
+          <Route path="/request" element={<Req/> } />
         </Routes>
       </div>
       <Footer/>
