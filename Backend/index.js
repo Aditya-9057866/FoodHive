@@ -8,8 +8,7 @@ const connectDB = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
 const donateRoutes = require("./routes/donateRoute");
 const reviewRoutes = require("./routes/reviewRoute");
-
-
+const requestRoutes = require("./routes/requestRoute");
 
 connectDB();
 app.use(express.json());
@@ -28,6 +27,7 @@ app.get("/", (req, res) => {
 app.use("/api/user", userRoutes);
 app.use("/api/review", reviewRoutes);
 app.use("/api/donate", donateRoutes);
+app.use("/api/request", requestRoutes);
 app.listen(PORT, () => {
   console.log(`server started at ${PORT}`);
 });
