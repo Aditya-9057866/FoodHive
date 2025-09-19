@@ -13,7 +13,7 @@ const Req = () => {
   const fetchDonations = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get('http://localhost:5000/api/donate');
+      const { data } = await axios.get('https://foodhive-3.onrender.com/api/donate');
       setDonations(data);
       setLoading(false);
     } catch (err) {

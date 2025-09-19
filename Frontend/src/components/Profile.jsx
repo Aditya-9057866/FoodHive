@@ -22,11 +22,11 @@ const Profile = () => {
     try {
       setLoading(true);
       // Fetch all donations and filter by user email
-      const donateRes = await axios.get('http://localhost:5000/api/donate');
+      const donateRes = await axios.get('https://foodhive-3.onrender.com/api/donate');
       const userDonated = donateRes.data.filter(order => order.email === email);
       setDonatedOrders(userDonated);
   // Fetch all requests and filter by user email
-  const requestRes = await axios.get('http://localhost:5000/api/request');
+  const requestRes = await axios.get('https://foodhive-3.onrender.com/api/request');
   const userRequested = requestRes.data.filter(order => order.email === email);
   setRequestedOrders(userRequested);
       setLoading(false);

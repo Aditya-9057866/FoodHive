@@ -25,7 +25,7 @@ const Signup = () => {
       const config = { headers: { "Content-type": "application/json" } };
 
       const { data } = await axios.post(
-        "http://localhost:5000/api/user/signup",
+        "https://foodhive-3.onrender.com/api/user/signup",
         { name, email, password },
         config
       );

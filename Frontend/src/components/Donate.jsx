@@ -26,7 +26,7 @@ const Donate = () => {
     setSuccess('');
     setError('');
     try {
-      await axios.post('http://localhost:5000/api/donate', {
+      await axios.post('https://foodhive-3.onrender.com/api/donate', {
         ...form,
         quantity: Number(form.quantity),
         phone: Number(form.phone),

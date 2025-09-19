@@ -17,7 +17,7 @@ const Contact = () => {
   const fetchReviews = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get('http://localhost:5000/api/review');
+      const { data } = await axios.get('https://foodhive-3.onrender.com/api/review');
       setReviews(data);
       setLoading(false);
     } catch (err) {
@@ -31,7 +31,7 @@ const Contact = () => {
     if (!name || !email || !message ) return;
     try {
       setLoading(true);
-      await axios.post('http://localhost:5000/api/review', { name, email, message });
+      await axios.post('https://foodhive-3.onrender.com/api/review', { name, email, message });
       setName('');
       setEmail('');
       setMessage('');
